@@ -15,7 +15,9 @@ const config: Config = {
     '^.+\\.tsx?$': 'babel-jest'
   },
   moduleNameMapper: {
-    '\\.(svg)$': '<rootDir>/.jest/mocks/fileMock.ts'
+    '\\.(svg)$': '<rootDir>/.jest/mocks/fileMock.ts',
+    '^styled-components':
+      'styled-components/dist/styled-components.browser.cjs.js'
   }
 }
 

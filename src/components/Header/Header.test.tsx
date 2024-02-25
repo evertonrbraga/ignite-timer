@@ -10,6 +10,8 @@ describe('<Header />', () => {
       </BrowserRouter>
     )
     expect(container).toBeInTheDocument()
+    expect(container.firstChild).toMatchSnapshot()
+    expect(container.firstChild).toHaveStyle({ display: 'flex' })
   })
 
   beforeEach(() => {

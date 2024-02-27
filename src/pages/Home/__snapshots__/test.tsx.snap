@@ -1,0 +1,215 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> should render the heading 1`] = `
+.c0 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.c0 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.c1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #E1E1E6;
+  font-size: 1.125rem;
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+
+.c2 {
+  background: transparent;
+  height: 2.5rem;
+  border: 0;
+  border-bottom: 2px solid #7C7C8A;
+  font-weight: bold;
+  font-size: 1.125rem;
+  padding: 0 0.5rem;
+  color: #E1E1E6;
+}
+
+.c2:focus {
+  box-shadow: none;
+  border-color: #00875F;
+}
+
+.c2::placeholder {
+  color: #7C7C8A;
+}
+
+.c3 {
+  flex: 1;
+}
+
+.c3::-webkit-calendar-picker-indicator {
+  display: none!important;
+}
+
+.c4 {
+  width: 4rem;
+}
+
+.c5 {
+  font-family: 'Roboto Mono',monospace;
+  font-size: 10rem;
+  line-height: 8rem;
+  color: #E1E1E6;
+  display: flex;
+  gap: 1rem;
+}
+
+.c5 span {
+  background: #29292E;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+}
+
+.c6 {
+  padding: 2rem 0;
+  color: #00875F;
+  width: 4rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.c7 {
+  width: 100%;
+  border: 0;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #00875F;
+  color: #E1E1E6;
+}
+
+.c7:hover {
+  background: #015F43;
+}
+
+<main
+  class="c0"
+>
+  <form
+    action=""
+  >
+    <div
+      class="c1"
+    >
+      <label
+        for="task"
+      >
+        Vou trabalhar em
+      </label>
+      <input
+        class="c2 c3"
+        id="task"
+        list="task-suggestions"
+        placeholder="Dê um nome para o seu projeto"
+      />
+      <datalist
+        aria-label="lista de sugestões de projeto"
+        id="task-suggestions"
+      >
+        <option
+          value="Projeto 1"
+        />
+        <option
+          value="Projeto 2"
+        />
+        <option
+          value="Projeto 3"
+        />
+        <option
+          value="Banana"
+        />
+      </datalist>
+      <label
+        for="minutesAmount"
+      >
+        durante
+      </label>
+      <input
+        class="c2 c4"
+        id="minutesAmount"
+        max="60"
+        min="5"
+        placeholder="00"
+        step="5"
+        type="number"
+      />
+      <span>
+        minutos.
+      </span>
+    </div>
+    <div
+      aria-label="container do contador"
+      class="c5"
+    >
+      <span
+        aria-label="número do contador"
+      >
+        0
+      </span>
+      <span>
+        0
+      </span>
+      <div
+        aria-label="separador"
+        class="c6"
+      >
+        :
+      </div>
+      <span>
+        0
+      </span>
+      <span>
+        0
+      </span>
+    </div>
+    <button
+      class="c7"
+    >
+      <svg
+        aria-label="ícone de play"
+        fill="currentColor"
+        height="24"
+        viewBox="0 0 256 256"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect
+          fill="none"
+          height="256"
+          width="256"
+        />
+        <path
+          d="M228.1,121.2,84.2,33.2A8,8,0,0,0,72,40V216a8,8,0,0,0,12.2,6.8l143.9-88A7.9,7.9,0,0,0,228.1,121.2Z"
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="16"
+        />
+      </svg>
+      Começar
+    </button>
+  </form>
+</main>
+`;

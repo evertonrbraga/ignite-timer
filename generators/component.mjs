@@ -22,7 +22,7 @@ export default function (plop) {
       {
         type: 'add',
         path: '../src/components/{{pascalCase name}}/stories.tsx',
-        templateFile: 'templates/stories.tsx.hbs'
+        templateFile: 'templates/componentStories.tsx.hbs'
       },
       {
         type: 'add',

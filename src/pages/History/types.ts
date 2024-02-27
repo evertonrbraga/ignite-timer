@@ -1,0 +1,1 @@
+export type HistoryType = React.FC

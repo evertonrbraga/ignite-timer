@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should snapshot the Button component 1`] = `
+.c0 {
+  width: 100%;
+  border: 0;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #00875F;
+  color: #E1E1E6;
+}
+
+.c0:hover {
+  background: #015F43;
+}
+
+<button
+  class="c0"
+>
+  <svg
+    aria-label="ícone de play"
+    fill="currentColor"
+    height="24"
+    viewBox="0 0 256 256"
+    width="24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect
+      fill="none"
+      height="256"
+      width="256"
+    />
+    <path
+      d="M228.1,121.2,84.2,33.2A8,8,0,0,0,72,40V216a8,8,0,0,0,12.2,6.8l143.9-88A7.9,7.9,0,0,0,228.1,121.2Z"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="16"
+    />
+  </svg>
+  Começar
+</button>
+`;

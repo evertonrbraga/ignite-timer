@@ -1,1 +1,0 @@
-export type AvatarType = React.FC

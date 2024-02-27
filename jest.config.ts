@@ -5,7 +5,6 @@ const config: Config = {
   setupFilesAfterEnv: ['<rootDir>/.jest/setup-tests.ts'],
   collectCoverage: true,
   coverageDirectory: 'coverage',
-  collectCoverageFrom: ['src/**/*.ts(x)?', '!src/**/stories.tsx'],
   coverageProvider: 'v8',
   coveragePathIgnorePatterns: [
     '/node_modules/',

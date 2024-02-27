@@ -1,11 +1,27 @@
 import { render, screen } from '@testing-library/react'
-
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from '../../src/styles/themes/default'  
 import { {{pascalCase name}} } from '.'
 
 describe('<{{pascalCase name}} />', () => {
-  it('should render the heading', () => {
-    const { container } = render(<{{pascalCase name}} />)
-    expect(screen.getByRole('heading', { name: /{{pascalCase name}}/i })).toBeInTheDocument()
+  it('should snapshot the {{pascalCase name}} component', () => {
+    const { container } = render(
+      <ThemeProvider theme={defaultTheme}>
+        <{{pascalCase name}} />
+      </ThemeProvider>
+    )
     expect(container.firstChild).toMatchSnapshot()
+  })
+
+  beforeEach(() => {
+    render(
+      <ThemeProvider theme={defaultTheme}>
+        <{{pascalCase name}} />
+      </ThemeProvider>
+    )
+  })
+
+  it('should render the heading', () => {
+    expect(screen.getByRole('heading', { name: /{{pascalCase name}}/i })).toBeInTheDocument()
   })
 })

@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Avatar /> should render the heading 1`] = `
+exports[`<History /> should render the heading 1`] = `
 <main
   class=""
 >
   <h1>
-    Avatar
+    History
   </h1>
 </main>
 `;

@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { ThemeProvider } from 'styled-components'
-import { defaultTheme } from '../../src/styles/themes/default'  
+import { defaultTheme } from '../../styles/themes/default'  
 import { {{pascalCase name}} } from '.'
 
 describe('<{{pascalCase name}} />', () => {
@@ -11,17 +11,5 @@ describe('<{{pascalCase name}} />', () => {
       </ThemeProvider>
     )
     expect(container.firstChild).toMatchSnapshot()
-  })
-
-  beforeEach(() => {
-    render(
-      <ThemeProvider theme={defaultTheme}>
-        <{{pascalCase name}} />
-      </ThemeProvider>
-    )
-  })
-
-  it('should render the heading', () => {
-    expect(screen.getByRole('heading', { name: /{{pascalCase name}}/i })).toBeInTheDocument()
   })
 })

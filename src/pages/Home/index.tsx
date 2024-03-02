@@ -1,17 +1,53 @@
+import { useForm } from 'react-hook-form'
+import * as zod from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { Button } from '../../components/Button'
 import * as T from './types'
 import * as S from './styles'
-import { Button } from '../../components/Button'
+
+const newCycleFormValidationSchema = zod.object({
+  task: zod.string().min(1, 'Informe a tarefa'),
+  minutesAmount: zod
+    .number({
+      invalid_type_error: 'O número não pode ser nulo'
+    })
+    .min(5, 'O ciclo deve ser no mínimo de 5 minutos.')
+    .max(60, 'O ciclo deve ser no máximo de 60 minutos.')
+})
+
+type NewCycleFormData = zod.infer<typeof newCycleFormValidationSchema>
 
 export const Home: T.HomeType = () => {
+  const { register, handleSubmit, watch, formState, reset } =
+    useForm<NewCycleFormData>({
+      resolver: zodResolver(newCycleFormValidationSchema),
+      defaultValues: {
+        task: '',
+        minutesAmount: 0
+      }
+    })
+
+  function handleCreateNewCycle(data: NewCycleFormData) {
+    console.log(data)
+    reset()
+  }
+
+  console.log(formState.errors)
+
+  const task = watch('task')
+  const minutesAmount = watch('minutesAmount')
+  const isSubmitDisabled = !task || !minutesAmount
+
   return (
     <S.HomeContainer>
-      <form action=''>
+      <form onSubmit={handleSubmit(handleCreateNewCycle)} action=''>
         <S.FormContainer>
           <label htmlFor='task'>Vou trabalhar em</label>
           <S.TaskInput
             id='task'
             list='task-suggestions'
             placeholder='Dê um nome para o seu projeto'
+            {...register('task')}
           />
 
           <datalist
@@ -32,6 +68,7 @@ export const Home: T.HomeType = () => {
             step={5}
             min={5}
             max={60}
+            {...register('minutesAmount', { valueAsNumber: true })}
           />
 
           <span>minutos.</span>
@@ -45,7 +82,7 @@ export const Home: T.HomeType = () => {
           <span>0</span>
         </S.CountdownContainer>
 
-        <Button />
+        <Button disabled={isSubmitDisabled} />
       </form>
     </S.HomeContainer>
   )

@@ -90,4 +90,35 @@ describe('<Home />', () => {
       justify-content: center;
     `)
   })
+
+  it('should check if the disable feature works properly', () => {
+    const taskInput = screen.getByPlaceholderText(
+      'Dê um nome para o seu projeto'
+    )
+    const minutesAmountInput = screen.getByPlaceholderText('00')
+    const button = screen.getByText('Começar')
+
+    expect(button).toBeDisabled()
+
+    fireEvent.change(taskInput, { target: { value: 'First project' } })
+    fireEvent.change(minutesAmountInput, { target: { value: 25 } })
+
+    expect(button).not.toBeDisabled()
+  })
+
+  it('should check if the form fields are resetted on submit', () => {
+    const taskInput = screen.getByPlaceholderText(
+      'Dê um nome para o seu projeto'
+    )
+    const minutesAmountInput = screen.getByPlaceholderText('00')
+    const button = screen.getByText('Começar')
+
+    fireEvent.change(taskInput, { target: { value: 'First project' } })
+    fireEvent.change(minutesAmountInput, { target: { value: 25 } })
+
+    fireEvent.click(button)
+
+    waitFor(() => expect(taskInput).toHaveValue(''))
+    waitFor(() => expect(minutesAmountInput).toHaveValue(0))
+  })
 })

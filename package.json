@@ -16,14 +16,17 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "D": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^6.1.8"
+    "styled-components": "^6.1.8",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-react": "^7.23.3",
     "@babel/preset-typescript": "^7.23.3",
+    "@hookform/resolvers": "^3.3.4",
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
@@ -51,6 +54,7 @@
     "phosphor-react": "^1.4.1",
     "plop": "^4.0.1",
     "prettier": "^3.2.5",
+    "react-hook-form": "^7.50.1",
     "react-router-dom": "^6.22.1",
     "storybook": "^7.6.17",
     "typescript": "^5.2.2",

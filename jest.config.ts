@@ -1,4 +1,5 @@
 import type { Config } from 'jest'
+import { join } from 'path'
 
 const config: Config = {
   testEnvironment: 'jest-environment-jsdom',
@@ -18,7 +19,8 @@ const config: Config = {
     '\\.(svg)$': '<rootDir>/.jest/mocks/fileMock.ts',
     '^styled-components':
       'styled-components/dist/styled-components.browser.cjs.js'
-  }
+  },
+  moduleDirectories: ['node_modules', join(__dirname, 'src'), 'shared']
 }
 
 export default config

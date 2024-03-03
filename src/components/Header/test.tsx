@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import { Header } from '.'
 import { BrowserRouter } from 'react-router-dom'
+import { Header } from '.'
 
 describe('<Header />', () => {
   it('should check if the Header component renders correctly', () => {

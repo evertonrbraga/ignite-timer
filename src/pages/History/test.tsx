@@ -1,6 +1,6 @@
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { ThemeProvider } from 'styled-components'
-import { defaultTheme } from '../../styles/themes/default'
+import { defaultTheme } from 'styles/themes/default'
 import { History } from '.'
 
 describe('<History />', () => {

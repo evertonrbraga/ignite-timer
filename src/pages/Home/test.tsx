@@ -1,7 +1,7 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { Home } from '.'
 import { ThemeProvider } from 'styled-components'
-import { defaultTheme } from '../../styles/themes/default'
+import { defaultTheme } from 'styles/themes/default'
 
 describe('<Home />', () => {
   it('should render the heading', () => {

@@ -18,12 +18,17 @@ exports[`<Header /> should check if the Header component renders correctly 1`] =
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #E1E1E6;
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
 }
 
 .c0 nav a:hover {
-  border-bottom: 3px solid;
+  border-bottom: 3px solid #00875F;
+}
+
+.c0 nav a.active {
+  color: #00875F;
 }
 
 <header

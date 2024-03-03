@@ -1,25 +1,15 @@
-import { fireEvent, render, screen } from '@testing-library/react'
-import { BrowserRouter } from 'react-router-dom'
+import { screen, fireEvent } from '@testing-library/react'
+import { renderWithTheme } from 'utils/renderWithTheme'
 import { Header } from '.'
 
 describe('<Header />', () => {
   it('should check if the Header component renders correctly', () => {
-    const { container } = render(
-      <BrowserRouter>
-        <Header />
-      </BrowserRouter>
-    )
-    expect(container).toBeInTheDocument()
+    const { container } = renderWithTheme(<Header />)
     expect(container.firstChild).toMatchSnapshot()
-    expect(container.firstChild).toHaveStyle({ display: 'flex' })
   })
 
   beforeEach(() => {
-    render(
-      <BrowserRouter>
-        <Header />
-      </BrowserRouter>
-    )
+    renderWithTheme(<Header />)
   })
 
   it('should check if the Timer icon goes to the right path', () => {

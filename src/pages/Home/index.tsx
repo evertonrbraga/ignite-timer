@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import * as zod from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { Button } from 'components/Button'
+import { Button } from '../../components/Button'
 import * as T from './types'
 import * as S from './styles'
 

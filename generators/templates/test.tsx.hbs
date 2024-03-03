@@ -1,15 +1,16 @@
-import { render, screen } from '@testing-library/react'
-import { ThemeProvider } from 'styled-components'
-import { defaultTheme } from 'styles/themes/default'  
+import { screen } from '@testing-library/react'
+import { renderWithTheme } from 'utils/renderWithTheme'
 import { {{pascalCase name}} } from '.'
 
 describe('<{{pascalCase name}} />', () => {
   it('should snapshot the {{pascalCase name}} component', () => {
-    const { container } = render(
-      <ThemeProvider theme={defaultTheme}>
-        <{{pascalCase name}} />
-      </ThemeProvider>
-    )
+    const { container } = renderWithTheme(<{{pascalCase name}} />)
     expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('should snapshot the {{pascalCase name}} component', () => {
+    renderWithTheme(<{{pascalCase name}} />)
+    const title = screen.getByText('{{pascalCase name}}')
+    expect(title).toBeInTheDocument()
   })
 })

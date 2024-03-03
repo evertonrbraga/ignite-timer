@@ -1,15 +1,9 @@
-import { render } from '@testing-library/react'
-import { ThemeProvider } from 'styled-components'
-import { defaultTheme } from 'styles/themes/default'
 import { History } from '.'
+import { renderWithTheme } from 'utils/renderWithTheme'
 
 describe('<History />', () => {
   it('should snapshot the History component', () => {
-    const { container } = render(
-      <ThemeProvider theme={defaultTheme}>
-        <History />
-      </ThemeProvider>
-    )
+    const { container } = renderWithTheme(<History />)
     expect(container.firstChild).toMatchSnapshot()
   })
 })

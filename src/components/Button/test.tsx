@@ -15,13 +15,21 @@ describe('<Button />', () => {
   })
 
   it('should check if the disabled feature works properly', () => {
-    render(
+    const { rerender } = render(
+      <ThemeProvider theme={defaultTheme}>
+        <Button />
+      </ThemeProvider>
+    )
+
+    const button = screen.getByText('Começar')
+    expect(button).not.toBeDisabled()
+
+    rerender(
       <ThemeProvider theme={defaultTheme}>
         <Button disabled={true} />
       </ThemeProvider>
     )
 
-    const button = screen.getByText('Começar')
     expect(button).toBeDisabled()
   })
 

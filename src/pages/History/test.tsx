@@ -1,9 +1,9 @@
+import { render } from 'project-testing-library'
 import { History } from '.'
-import { renderWithTheme } from 'utils/renderWithTheme'
 
 describe('<History />', () => {
-  it('should snapshot the History component', () => {
-    const { container } = renderWithTheme(<History />)
+  it('should snapshot the History page', () => {
+    const { container } = render(<History />)
     expect(container.firstChild).toMatchSnapshot()
   })
 })

@@ -28,11 +28,9 @@ export const Home: T.HomeType = () => {
     })
 
   function handleCreateNewCycle(data: NewCycleFormData) {
-    console.log(data)
+    console.log(task)
     reset()
   }
-
-  console.log(formState.errors)
 
   const task = watch('task')
   const minutesAmount = watch('minutesAmount')

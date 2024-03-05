@@ -1,0 +1,15 @@
+import { render, screen } from 'project-testing-library'
+import { {{pascalCase name}} } from '.'
+
+describe('<{{pascalCase name}} />', () => {
+  it('should snapshot the {{pascalCase name}} page', () => {
+    const { container } = render(<{{pascalCase name}} />)
+    expect(container.firstChild).toMatchSnapshot()
+  })
+
+  it('should if the title is rendering correctly', () => {
+    renderWithTheme(<{{pascalCase name}} />)
+    const title = screen.getByText('{{pascalCase name}}')
+    expect(title).toBeInTheDocument()
+  })
+})

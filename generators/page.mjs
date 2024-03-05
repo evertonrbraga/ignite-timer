@@ -32,7 +32,7 @@ export default function (plop) {
       {
         type: 'add',
         path: '../src/pages/{{pascalCase name}}/test.tsx',
-        templateFile: 'templates/test.tsx.hbs'
+        templateFile: 'templates/pageTest.tsx.hbs'
       }
     ]
   })

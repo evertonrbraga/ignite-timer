@@ -9,5 +9,6 @@ module.exports = {
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh']
+  plugins: ['react-refresh'],
+  noDebbuger: 'off'
 }

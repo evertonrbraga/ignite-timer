@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<History /> should snapshot the History component 1`] = `
+exports[`<History /> should snapshot the History page 1`] = `
 .c0 {
   flex: 1;
   padding: 3.5rem;

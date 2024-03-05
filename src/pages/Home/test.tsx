@@ -1,15 +1,14 @@
-import { screen, fireEvent, waitFor } from '@testing-library/react'
+import { render, screen, fireEvent, waitFor } from 'project-testing-library'
 import { Home } from '.'
-import { renderWithTheme } from 'utils/renderWithTheme'
 
 describe('<Home />', () => {
-  it('should render the heading', () => {
-    const { container } = renderWithTheme(<Home />)
+  it('should snapshot the Home page', () => {
+    const { container } = render(<Home />)
     expect(container.firstChild).toMatchSnapshot()
   })
 
   beforeEach(() => {
-    renderWithTheme(<Home />)
+    render(<Home />)
   })
 
   it('should check if static texts are displayed', () => {

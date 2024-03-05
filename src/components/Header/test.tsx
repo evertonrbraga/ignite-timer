@@ -1,15 +1,14 @@
-import { screen, fireEvent } from '@testing-library/react'
-import { renderWithTheme } from 'utils/renderWithTheme'
+import { render, screen, fireEvent } from 'project-testing-library'
 import { Header } from '.'
 
 describe('<Header />', () => {
-  it('should check if the Header component renders correctly', () => {
-    const { container } = renderWithTheme(<Header />)
+  it('should snapshot the Header component', () => {
+    const { container } = render(<Header />)
     expect(container.firstChild).toMatchSnapshot()
   })
 
   beforeEach(() => {
-    renderWithTheme(<Header />)
+    render(<Header />)
   })
 
   it('should check if the Timer icon goes to the right path', () => {
